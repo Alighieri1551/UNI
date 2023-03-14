@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body{
+    margin-left: 59px;
+    margin-top: 50px;
+    transition: all 0.7s ease;
+}
+
+main{
+    padding: 10px;
+}
+
+header{
+    width: 100%;
+    height: 50px;
+    background: #f5f5f5;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 200;
+}
+
+.icon__menu{
+    width: 50px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(10px);
+}
+
+.icon__menu i{
+    left: 70px;
+    font-size: 20px;
+    cursor: pointer;
+    position: absolute;
+}
+
+.menu__side{
+    width: 60px;
+    height: 100%;
+    background: #0e2a47;
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: white;
+    font-size: 18px;
+    z-index: 300;
+    overflow: hidden;
+    overflow-y: scroll;
+    transition: all 0.7s ease;
+}
+
+/*Ocultar scroll para chrome, safari y opera*/
+.menu__side::-webkit-scrollbar{
+    display: none;
+}
+
+/*Ocultar scroll para IE, Edge y Firefox*/
+.menu__side{
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/*ESTILO PARA QUE CUANDO PASE MI MOUSE SOBRE UN CONTENIDO DEL SIDEBAR, SE VUELVA BLANCO*/
+.menu__side .options__menu a:hover{
+    color: #0e2a47;
+    background: #fff;
+    border-radius: 10px;
+}
+
+.name__page{
+    padding: 20px 20px;
+    display: flex;
+    align-items: center;
+    color: skyblue;
+}
+
+.name__page i{
+    width: 20px;
+    margin-right: 20px;
+    font-size: 1.6rem;
+}
+
+.options__menu{
+    padding: 25px 20px;
+    position: absolute;
+    top: 70px;
+    color: #fff;
+}
+
+.options__menu a{
+    color: #fff;
+    cursor: default;
+    display: block;
+    position: relative;
+    transition: color 300ms;
+    text-decoration: none;
+}
+
+.options__menu a:hover{
+    color: white;
+}
+
+.options__menu .option{
+    padding: 10px 2px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.option i{
+    width: 20px;
+    margin-right: 24px;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+
+.option h4{
+    font-weight: 300;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+a.selected{
+    color: #fff;
+}
+
+.selected:before{
+    content: '';
+    width: 3px;
+    height: 80%;
+    background: white;
+    position: absolute;
+    top: 10%;
+    left: -30px;
+}
+
+.body_move{
+    margin-left: 230px;
+    transition: all 0.7s ease;
+}
+
+.menu__side_move{
+    width: 230px;
+    transition: all 0.7s ease;
+}
+
+
+@media screen and (max-width: 600px){
+    .body_move{
+        margin-left: 0px;
+    }
+
+    .menu__side_move{
+        width: 60px;
+        left: -60px;
+    }
+}

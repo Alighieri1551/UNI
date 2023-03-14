@@ -1,0 +1,27 @@
+/* ESTILO PARA EL FONDO DEL FORMULARIO */
+.card-formulariodp{
+    background-color: #e3e3e3;
+}
+
+/* ESTILO PARA LA ETIQUETA H3: FORMULARIO DE DATOS PERSONALES */
+.head-formulariodp{
+    margin-top: 20px;
+    background-color: black;
+    color: #fff;
+    max-width: 100%;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
+/* ESTILO PARA EL MARGEN DE IZQUIERDA Y DERECHA DEL FORMULARIO */
+.panel-bodyformdp{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+/* ESTILO PARA EL COLOR Y TAMAÑO DE LA CLASE FORMDP-LEGEND */
+.formdp-legend{
+    font-weight: bold;
+    font-size: 22px;
+}

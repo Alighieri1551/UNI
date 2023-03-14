@@ -1,0 +1,49 @@
+/* ESTILOS PARA LA PARTE SUPERIOR DE ASISTENCIA */
+.asistencia-head{
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.asistencia-head h1{
+    padding-top: 50px;
+    font-weight: 600;
+}
+
+.asistencia-form{
+    display: flex;
+    flex-direction: column;
+}
+
+.ingresarNombre{
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid silver;
+}
+
+.registrarAsistencia{
+    margin: auto;
+    padding: 10px;
+    background-color: steelblue;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 70%;
+}
+
+.registrarAsistencia:hover{
+    background: rgb(18, 63, 100);
+}
+
+/* ESTILOS PARA LA TABLA DE ASISTENCIA */
+.table-asistencia{
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.head-asistencia{
+    background: #f0f9fd;
+}

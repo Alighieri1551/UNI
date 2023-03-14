@@ -1,0 +1,122 @@
+/*MI-PERFIL*/
+.card-perfil{
+    background-color: #e7ebee;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: 22px;
+    box-shadow: 0px 1rem 1.5rem rgb(153, 150, 150);
+}
+
+.card-perfil figure img{
+    margin: auto;
+    border-radius: 50%;
+    height: 250px;
+    width: 200px;
+    display: block;
+}
+
+.card-perfil figure h3{
+    font-weight: bolder;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.card-perfil figure h6{
+    text-align: center;
+    font-size: 1rem;
+    color: #979699;
+}
+
+.follow-info{
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.follow-codiprom{
+    margin-right: 35px;
+    margin-left: 35px;
+    padding-bottom: 20px;
+}
+
+.follow-codiprom small{
+    color: #979699;
+    margin-right: 35px;
+    margin-left: 35px;
+}
+
+.follow-codiprom h3{
+    color: blue;
+    font-size: 2rem;
+}
+
+.card-perfil button{
+    width: 44%;
+    font-size: 1rem;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: yellow;
+    border-radius: 1rem;
+    border-color: yellow;
+    margin-bottom: 20px;
+}
+
+.items-perfil, .items-content{
+    background-color: #fff;
+}
+
+/*INFORMACIÓN-PERSONAL*/
+.card-academic{
+    background-color: #ffffff;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0px 0.85rem 0.85rem rgb(161, 153, 153);
+}
+  
+.accordion-tabs{
+    display: flex;
+}
+
+/*ESTILOS PARA EL BOTÓN DE INFORMACIÓN PERSONAL - ACADÉMICO*/
+.accordion-tabs .accordion-tab{
+    background:#efeef1;
+    padding: 2rem 0.2rem;
+    font: inherit;
+    flex: 1;
+    border: none;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    font-size: 1.2rem;
+}
+  
+.accordion-item.accordion-active{
+    display: block;
+    border: 0;
+}
+
+/*ESTILOS PARA EL PADDING DE INFORMACIÓN PERSONAL*/
+.accordion-item__container, .accordion-item__containeritem{
+    padding: 30px 30px 30px 30px;
+    margin: 0!important;
+}
+
+/*ocultar-info*/
+.accordion-item{
+    display: none;
+}
+
+.table tbody tr td{
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+
+.table strong{
+    margin: 0;
+}
+
+.botondemodificar{
+    padding-top: 40px;
+    display: grid;
+    place-items: center;
+}
