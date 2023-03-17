@@ -12,40 +12,49 @@
                     <i class='bx bx-bar-chart-square'></i>
                     <h5><u>Historial Académico y Calificaciones</u></h5>
                 </div>
+                <?php
+                    include("../../modelo/db.php");
+                    $pre = mysqli_query($informacion, "SELECT * FROM presentacion WHERE codigo = '".$_SESSION['usuario']."'");
+                ?>
                 <table class="table-historial">
+                    <?php 
+                        while($presentacion = mysqli_fetch_array($pre)): 
+                    ?>
                     <tbody>
                         <tr>
                             <td class="text-left"><strong>Código</strong></td>
                             <td class="text-center"><strong>:</strong></td>
-                            <td class="text-left"><span>1338891</span></td>
+                            <td><?= $presentacion['codigo'] ?></td>
                         </tr>
                         <tr>
                             <td class="text-left"><strong>Apellidos y nombres</strong></td>
                             <td class="text-center"><strong>:</strong></td>
-                            <td class="text-left"><span>Sembrera Cruz Dante</span></td>
+                            <td><?= $presentacion['nombre'] ?></td>
                         </tr>
                         <tr>
                             <td class="text-left"><strong>Facultad</strong></td>
                             <td class="text-center"><strong>:</strong></td>
-                            <td class="text-left"><span>Ingeniería de Sistemas</span></td>
+                            <td><?= $presentacion['facultad'] ?></td>
                         </tr>
                         <tr>
                             <td class="text-left"><strong>Escuela</strong></td>
                             <td class="text-center"><strong>:</strong></td>
-                            <td class="text-left"><span>E.P. de Ingeniería de Software</span></td>
+                            <td><?= $presentacion['escuela'] ?></td>
                         </tr>
                         <tr>
                             <td class="text-left"><strong>Especialidad</strong></td>
                             <td class="text-center"><strong>:</strong></td>
-                            <td class="text-left"><span>Desarrollo Web Front-end</span></td>
+                            <td><?= $presentacion['especialidad'] ?></td>
                         </tr>
                         <tr>
                             <td class="text-left"><strong>Periodo académico</strong></td>
                             <td class="text-center"><strong>:</strong></td>
-                            <td class="text-left"><span>2023-I</span></td>
+                            <td><?= $presentacion['periodoAcademico'] ?></td>
                         </tr>
                     </tbody>
+                    <?php endwhile; ?>
                 </table>
+
             </div>
         </div>
     </div>

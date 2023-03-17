@@ -11,7 +11,7 @@
             <div class="cardresume">
                 <div class="fotosUsuarios">
                     <?php
-                        // $usuarios = "SELECT * FROM presentacion WHERE codigo = '".$_SESSION['usuario']."'";
+                        $usuarios = "SELECT * FROM presentacion WHERE codigo = '".$_SESSION['usuario']."'";
                         $usuarios = "dante";
                         $fotos = "../../../assets/img/";
 
@@ -23,53 +23,52 @@
                     ?>
                 </div>
                 <div class="tablaUsuarios">
+                    <?php
+                        include("../../modelo/db.php");
+                        $pre = mysqli_query($informacion, "SELECT * FROM presentacion WHERE codigo = '".$_SESSION['usuario']."'");
+                    ?>
                     <table class="table_items-content">
-                        <?php
-                            include("../../modelo/db.php");
-                            $pre = mysqli_query($informacion, "SELECT * FROM presentacion WHERE codigo = '".$_SESSION['usuario']."'");
-                            while($presentacion = mysqli_fetch_array($pre)){
-                                $presentacion['nombre'].','.$presentacion['funcion'].','.$presentacion['codigo'].','.$presentacion['facultad'].','.$presentacion['escuela'].','.$presentacion['especialidad'].','.$presentacion['periodoAcademico'];
+                        <?php 
+                            while($presentacion = mysqli_fetch_array($pre)): 
                         ?>
                         <tbody>
                             <tr>
                                 <td><i class='bx bxs-user'></i></td>
                                 <td><strong>NOMBRE:</strong></td>
-                                <td><?php echo $presentacion['nombre'];?></td>
+                                <td><?= $presentacion['nombre'] ?></td>
                             </tr>
                             <tr>
                                 <td><i class='bx bxs-graduation'></i></td>
                                 <td><strong>FUNCION:</strong></td>
-                                <td><?php echo $presentacion['funcion'];?></td>
+                                <td><?= $presentacion['funcion'] ?></td>
                             </tr>
                             <tr>
                                 <td><i class='bx bxs-circle'></i></td>
                                 <td><strong>CÓDIGO:</strong></td>
-                                <td><?php echo $presentacion['codigo'];?></td>
+                                <td><?= $presentacion['codigo'] ?></td>
                             </tr>
                             <tr>
                                 <td><i class='bx bxs-school'></i></td>
                                 <td><strong>FACULTAD:</strong></td>
-                                <td><?php echo $presentacion['facultad'];?></td>
+                                <td><?= $presentacion['facultad'] ?></td>
                             </tr>
                             <tr>
                                 <td><i class='bx bxs-school'></i></td>
                                 <td><strong>ESCUELA:</strong></td>
-                                <td><?php echo $presentacion['escuela'];?></td>
+                                <td><?= $presentacion['escuela'] ?></td>
                             </tr>
                             <tr>
                                 <td><i class='bx bxs-school'></i></td>
                                 <td><strong>ESPECIALIDAD:</strong></td>
-                                <td><?php echo $presentacion['especialidad'];?></td>
+                                <td><?= $presentacion['especialidad'] ?></td>
                             </tr>
                             <tr>
                                 <td><i class='bx bxs-calendar'></i></td>
                                 <td><strong>PERIODO ACADÉMICO:</strong></td>
-                                <td><?php echo $presentacion['periodoAcademico'];?></td>
+                                <td><?= $presentacion['periodoAcademico'] ?></td>
                             </tr>
                         </tbody>
-                        <?php
-                        }
-                        ?>
+                        <?php endwhile; ?>
                     </table>
                 </div>
             </div>
